@@ -11,6 +11,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
   
 	files 
 	{
+		"imconfig.h",
+		"imgui.h",
+		"imgui_internal.h",
+		"imstb_rectpack.h",
+		"imstb_textedit.h",
+		"imstb_truetype.h",
 		"imgui.cpp",
 		"imgui_widgets.cpp",
 		"imgui_tables.cpp",
@@ -31,3 +37,8 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 		runtime "Release"
 		optimize "On"
 		symbols "On"
+		
+    filter "configurations:Dist"
+		runtime "Release"
+		optimize "on"
+        symbols "off"
